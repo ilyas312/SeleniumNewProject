@@ -51,7 +51,7 @@ public class C04_ManageMethods_ImplicitlyWait {
             System.out.println("TEST FAILED "+ actualTitle2);
 
         //Sayfayı kapatınız
-        driver.close();
+        driver.close();//
 
 
 
