@@ -24,6 +24,7 @@ public class C01_DriverMethods_ClassWork {
             System.out.println("Test PASSED");
         } else System.out.println("Test FAILED -> " + actualUrl);
 
+
         //Sayfayı kapatalım
         driver.close();//Browser'ı kapatır
         //driver.quit();-> Birden fazla browser varsa hepsini kapatır.
