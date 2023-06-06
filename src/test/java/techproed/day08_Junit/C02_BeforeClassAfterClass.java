@@ -3,41 +3,44 @@ package techproed.day08_Junit;
 import org.junit.*;
 
 public class C02_BeforeClassAfterClass {
+ /*
+    @BeforeClass class'da en once calısan methoddur.
+    @AfterClass class'da en son calısan methoddur.
 
-    /*
-    @BeforeClass class ta en önce çalışan method dur.
-    @AfterClass class ta en son çalışan method dur.
-
-    @BeforeClass ve @AfterClass method ları sadece static methodlar ile çalışır.
+    @BeforeClass ve @AfterClass methodları sadece static methodlar ile calısır.
      */
 
     @BeforeClass
     public static void beforeClass() throws Exception {
-        System.out.println("Classta en önce çalışan methoddur bir kez çalışır");
+        System.out.println("Class'da en once calısan methoddur bir kez calısır");
     }
 
     @AfterClass
     public static void afterClass() throws Exception {
-        System.out.println("Classta en son çalışan methoddur bir kez çalışır");
+        System.out.println("Class'da en son calısan methoddur bir kez calısır");
     }
+
 
     @Before
     public void setUp() throws Exception {
-        System.out.println("Her test methodundan önce çalışır");
+        System.out.println("Her test methodundan once calısır");
     }
+
 
     @After
     public void tearDown() throws Exception {
-        System.out.println("Her test methodundan sonra çalışır");
+        System.out.println("Her test methodundan sonra calısır");
     }
+
 
     @Test
     public void test01() {
-        System.out.println("İlk test");
+        System.out.println("ilk test");
     }
+
 
     @Test
     public void test02() {
-        System.out.println("İkinci test");
+        System.out.println("ikinci test");
     }
 }

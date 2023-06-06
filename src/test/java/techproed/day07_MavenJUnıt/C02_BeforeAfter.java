@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class C02_junitIlkTest {
+public class C02_BeforeAfter {
       /*
             Notasyonlara sahip methodlar oluşturabilmek için
             mouse+sağ tik+generate(alt+insert)
