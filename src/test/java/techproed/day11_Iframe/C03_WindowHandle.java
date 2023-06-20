@@ -42,6 +42,8 @@ public class C03_WindowHandle extends TestBase {
 
 //  Yeni bir pencere acıp,  https://www.youtube.com sayfasına gidiniz
         driver.switchTo().newWindow(WindowType.WINDOW);//Yeni pencereye driverı taşır
+        //WindowType.TAB ==> yeni sekme açar
+
         driver.get("https://www.youtube.com");
 
         bekle(2);

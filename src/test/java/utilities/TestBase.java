@@ -6,9 +6,13 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
@@ -54,6 +58,14 @@ public abstract class TestBase {
 
         driver.switchTo().alert().dismiss();
     }
+    //getTextAlert
+    public String getTextAlert(){
+        return driver.switchTo().alert().getText();
+    }
+    //sendKeysAlert
+    public void sendKeysAlert(String text){
+        driver.switchTo().alert().sendKeys(text);
+    }
 
     public void alertPrompt(String text) {
         driver.switchTo().alert().sendKeys(text);
@@ -69,9 +81,32 @@ public abstract class TestBase {
         select.selectByIndex(index);
 
     }
+
     public void Value(WebElement ddm, String secenek) {
         Select select = new Select(ddm);
         select.selectByValue(secenek);
 
+    }
+
+    public void visibleWait(WebElement element, int sayi) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(sayi));
+        wait.until(ExpectedConditions.visibilityOf(element));
+
+    }
+
+    public void switchToWindow(int index) {
+        List<String> pencereler = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(pencereler.get(index));
+    }
+
+    public void switchToWindow2(int index) {
+        driver.switchTo().window(driver.getWindowHandles().toArray()[index].toString());
+
+
+    }
+    //DropDown VisibleText
+    public void selectVisibleText(WebElement ddm, String text){
+        Select select = new Select(ddm);
+        select.selectByVisibleText(text);
     }
 }
