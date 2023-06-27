@@ -496,7 +496,7 @@ v4.0.0-beta-2
 * Make better use of `getDomAttribute` in `Select`
 * [cdp] Added support for Firefox Nightly
 * [cdp] Use `se:cdp` to report CDP endpoint
-* [grid] Close resources leaks caused by http client not being
+* [grid] Close resourses leaks caused by http client not being
   properly closed.
 * [grid] Nodes will auto-detect their platform
 * [grid] Make health check interval a configurable option for
@@ -2027,7 +2027,7 @@ WebDriverJS:
 Grid:
  * Modified to ignore exceptions during the clean-up process if failing
    to start a RemoteWebDriver instance.
- * FIXED: 6770: Setting a timeout when Jetty has low resources to
+ * FIXED: 6770: Setting a timeout when Jetty has low resourses to
    prevent hub from hanging.
  * FIXED: 6771: If a session times out and the browser was never
    started, it should still be cleaned up on the hub side.
@@ -2036,7 +2036,7 @@ Grid:
    threads Jetty uses. Default is -1, which implements the current
    behavior (255 threads from Jetty's default settings)
  * FIXED 6773: Consuming the request in all cases to properly release
-   resources.
+   resourses.
  * FIXED: 6811: Clean up immediately if starting a driver or session
    errors in RemoteWebDriver.
  * FIXED: 6878: Actually pass the response body to CommandListener
@@ -3126,7 +3126,7 @@ WebDriver:
 
 Grid:
   * Gracefully handle registration of old nodes in a new grid hub (#2738).
-  * Releasing all the resources when a proxy is removed from the hub (#2768).
+  * Releasing all the resourses when a proxy is removed from the hub (#2768).
 
 Known issues:
   * Synthesized mouse events are inaccurate (Affects Firefox driver users
