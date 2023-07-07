@@ -41,7 +41,6 @@ public abstract class TestBase {
 
     @Before
     public void setUp() throws Exception {
-
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
